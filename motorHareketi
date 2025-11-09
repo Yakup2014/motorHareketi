@@ -1,0 +1,41 @@
+void setup() {
+    Serial.begin(9600);
+    pinMode(D2,OUTPUT);
+    pinMode(D4,OUTPUT);
+    pinMode(D5,OUTPUT);
+  }
+            
+void motorDur() {
+    analogWrite(D2,0);
+}
+void motorHiz(int hiz);
+   analogWrite(D2,hiz);
+}
+void motorIleri(){
+  digitalWrite(D4,1);
+  digitalWrite(D5,2);
+}
+void motorGeri(){
+  digitalWrite(D4,0);
+  digitalWrite(D5,2);
+}
+void loop(){
+  Serial.println("Merhaba DEneyap Kart IDE");
+  motorHiz(200);
+  motorIleri();
+  delay(5000);
+  motorDur();
+  delay(5000);
+  motorHiz(200);
+  motorGeri();
+  delay(5000);
+}
+
+
+
+    digitalWrite(D4,1);
+    digitalWrite(D5,0);
+    analogWrite(D2,200);
+    delay(5000);
+    // loop kodlarını buraya ekleyin
+  }
